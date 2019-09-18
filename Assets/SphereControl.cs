@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControl : MonoBehaviour
+public class SphereControl : MonoBehaviour
 {
-    public Transform target;
-
+    public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x, target.position.y + 5, transform.position.z);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.useGravity = true;
+        }
     }
 }
