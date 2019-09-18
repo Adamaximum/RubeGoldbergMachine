@@ -6,7 +6,6 @@ public class CameraControl : MonoBehaviour
 {
     public Transform target;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +15,6 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x, target.position.y + 5, transform.position.z);
+        transform.position = new Vector3(target.position.x, target.position.y + 5, target.position.z - 10);
     }
 }
