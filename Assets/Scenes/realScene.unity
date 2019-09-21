@@ -1135,7 +1135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1076382792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1207,13 +1207,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076382791}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -21.63, y: 62.85, z: 0.08}
+  m_LocalRotation: {x: 0.34425634, y: -0, z: -0, w: 0.93887573}
+  m_LocalPosition: {x: 15.81, y: 11.69, z: -8.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40.273003, y: 0, z: 0}
 --- !u!1 &1273434718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +1924,7 @@ GameObject:
   - component: {fileID: 1881570263}
   - component: {fileID: 1881570262}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: CameraTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1942,6 +1942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c3a9171b0e8da4b9eeead08d864ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCamera: {fileID: 1076382794}
 --- !u!65 &1881570263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2009,8 +2010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881570261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.71, y: 45.36, z: 3.715}
-  m_LocalScale: {x: 2.8088, y: 2.4362, z: 1}
+  m_LocalPosition: {x: -0.02, y: 0.16, z: -0.17}
+  m_LocalScale: {x: 8.658968, y: 0.86363286, z: 9.5576}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
