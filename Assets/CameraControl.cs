@@ -8,6 +8,10 @@ public class CameraControl : MonoBehaviour
 
     //public Transform followTarget;
 
+    public float targetOffsetX;
+    public float targetOffsetY;
+    public float targetOffsetZ;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +21,7 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x, target.position.y + 5, target.position.z - 10);
+        transform.position = new Vector3(target.position.x + targetOffsetX, target.position.y + targetOffsetY, target.position.z + targetOffsetZ);
 
         //if(followTarget != null)
         //{
