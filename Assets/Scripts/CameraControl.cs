@@ -12,6 +12,10 @@ public class CameraControl : MonoBehaviour
     public float targetOffsetY;
     public float targetOffsetZ;
 
+    public bool camShift;
+    float rotateX;
+    float rotateY;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,23 +32,30 @@ public class CameraControl : MonoBehaviour
         //    Vector3 newForwardDirection = 
         //}
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            if(targetOffsetX > -3)
+            camShift = true;
+        }
+        if (camShift == true)
+        {
+            if (targetOffsetX > -3)
             {
-                targetOffsetX--;
+                targetOffsetX -= 0.1f;
             }
             if (targetOffsetY < 3)
             {
-                targetOffsetY++;
+                targetOffsetY += 0.1f;
             }
-            if (Camera.main.transform.rotation.x < 30)
+            
+            rotateX += 0.01f;
+            rotateY += 0.01f;
+            if (Camera.main.transform.rotation.x != 30)
             {
-                Camera.main.transform.Rotate(1, 0, 0);
+                Camera.main.transform.Rotate(rotateX, 0, transform.rotation.z);
             }
-            if (Camera.main.transform.rotation.y < 90)
+            if (Camera.main.transform.rotation.y != 90)
             {
-                Camera.main.transform.Rotate(0, 1, 0);
+                Camera.main.transform.Rotate(0, rotateY, transform.rotation.z);
             }
         }
 
