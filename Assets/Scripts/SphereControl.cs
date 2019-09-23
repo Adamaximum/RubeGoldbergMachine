@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SphereControl : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class SphereControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.useGravity = true;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("realScene");
         }
     }
 }
